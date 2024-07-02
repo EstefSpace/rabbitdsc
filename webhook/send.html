@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../assets/rabbit.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mandar mensaje con webhook | Discord</title>
+</head>
+<body>
+
+    <header id="inicio">
+        <div class="navbar">
+      <div class="logo"><a>Rabbit<span>Bot</span></a></div>
+      <ul class="navbar-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="send.html"><span>Webhook</span></a></li>
+         <li><a href="../comandos/categorias.html">Comandos</a></li>
+          <li><a href="../contacto/send.html" target="_blank">Contacto</a></li>
+      </ul>
+      <a href="#" target="_blank" class="action_btn">Discord</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+        </div>
+       </header>
+      
+      <div class="dropdown_menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="send.html" target="_blank"><span>Webhook</span></a></li>
+        <li><a href="../comandos/categorias.html">Comandos</a></li>
+        <li><a href="../contacto/send.html">Contacto</a></li>
+        <li><a href="#" target="_blank" class="action_btn">Discord</a></li>
+      </div>
+
+
+<div class="advertencia">
+  <h1>Advertencia</h1>
+  <p>Esta es la fase beta de esta función, por lo cual no es la mejor version sin embargo se esta trabajando para hacerla mejor</p>
+</div>
+    <form>
+        <label >Webhook URL (obligatoria)</label>
+<!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3897614073. -->
+<textarea id="webhook_url"  name="webhook_url" placeholder="La url de tu webhook" required ></textarea>
+<label class="opcional">Imagen URL (opcional)</label>
+<textarea id="imagen" name="image_url" placeholder="https://rabbitdsc.glitch.me/assets/rabbit.png" ></textarea>
+        <label class="opcional">Titulo (opcional)</label>
+        <textarea id="title"  name="title" placeholder="Anuncio del servidor" ></textarea>
+        <label>Descripcion (obligatoria)</label>
+        <textarea id="description" name="description" placeholder="Hola gente!" required></textarea>
+        <label class="opcional">Footer (opcional)</label>
+        <textarea id="footer" name="footer" placeholder="Gracias por su atencion!"></textarea>
+        <label>Color (obligatoria)</label>
+
+        <input id="colorEmbed" type="color" required>
+        <button onclick="message()">Enviar</button>
+    </form>
+    
+    <script src="javascript/main.js"></script>
+    <script src="javascript/webhook.js"></script>
+</body>
+</html>
